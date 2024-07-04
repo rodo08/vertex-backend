@@ -9,9 +9,9 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(@SuppressWarnings("null") CorsRegistry registry) {
-        registry.addMapping("/**") // Permitir todas las rutas
-                .allowedOrigins("*") // Orígenes permitidos (URL de tu aplicación Vue)
-                .allowedMethods("GET", "POST", "PUT", "DELETE") // Métodos HTTP permitidos
-                .allowedHeaders("*"); // Encabezados permitidos
+        registry.addMapping("/**")
+                .allowedOrigins("*")
+                .allowedMethods("GET", "POST", "PUT", "DELETE")
+                .allowedHeaders("*");
     }
 }
