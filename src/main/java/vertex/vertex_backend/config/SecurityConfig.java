@@ -28,9 +28,7 @@ public class SecurityConfig {
                                 .csrf(csrf -> csrf
                                                 .disable()) // security measure
                                 .authorizeHttpRequests(authRequest -> authRequest
-                                                .requestMatchers("/auth/**", "/user",
-                                                                "/{userId}/events",
-                                                                "/{userId}")
+                                                .requestMatchers("/auth/**")
                                                 .permitAll()
                                                 .anyRequest().authenticated())
                                 // step19
